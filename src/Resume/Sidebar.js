@@ -12,8 +12,8 @@ const Sidebar = ({ data }) => (
       <div>
         <ContactLinks data={data.links} />
         <Languages data={data.languages} />
-        <SidebarList title="Frameworks" items={data.frameworks} />
-        <SidebarList title="Tools" items={data.tools} />
+        {/* <SidebarList title="Frameworks" items={data.frameworks} />
+        <SidebarList title="Tools" items={data.tools} /> */}
       </div>
       <div>
         <Hobbies hobby={data.hobby.hobby} />

@@ -2,21 +2,18 @@ import React, { Component } from "react";
 import Container from "../ui/Container";
 import Sidebar from "./Sidebar";
 import Main from "./Main";
-import JSLogo from "./images/js.svg";
-import JavaLogo from "./images/java.svg";
 import SQLLogo from "./images/sql.svg";
 import SeleniumLogo from "./images/selenium.svg";
-import Link from "../ui/Link";
 import PythonLogo from "./images/python.svg";
 import JenkinsLogo from "./images/jenkins.svg";
 import DockerLogo from "./images/docker.svg";
-import APItestingLogo from "./images/api.svg";
 import PostmanLogo from "./images/postman.svg";
-import ReactLogo from "./images/react.svg";
-import JMterLogo from "./images/jmeter.svg";
-import ReactNativeLogo from "./images/react.svg";
-import htmlLogo from "./images/html.svg";
-import GitLogo from './images/git.svg'
+import Akamai from "./images/akamai-4.svg";
+import PuppetLogo from "./images/puppet-1.svg";
+import KubernetesLogo from "./images/kubernets.svg";
+import AWSLogo from "./images/aws-2.svg";
+import GitLogo from './images/git.svg';
+import AnsibleLogo from './images/ansible.svg'
 class Resume extends Component {
   render() {
     return (
@@ -37,27 +34,37 @@ const DATA = {
     },
     languages: [
       {
-        name: "Selenium",
-        proficiency: 0.7,
-        logo: SeleniumLogo,
-      },
-      {
-        name: "Jmeter",
-        proficiency: 0.8,
-        logo: JMterLogo,
-      },
-      {
-        name: "JavaScript",
+        name: "AWS",
         proficiency: 0.5,
-        logo: JSLogo,
+        logo: AWSLogo
       },
       {
-        name: "Java",
+        name: "Jenkins",
         proficiency: 0.7,
-        logo: JavaLogo,
+        logo: JenkinsLogo,
       },
       {
-        name:"GIT",
+        name: "Ansible",
+        proficiency: 0.5,
+        logo: AnsibleLogo
+      },
+      {
+        name: "Puppet",
+        proficiency: 0.5,
+        logo: PuppetLogo
+      },
+      {
+        name: "Kubernetes",
+        proficiency: 0.5,
+        logo: KubernetesLogo
+      },
+      {
+        name: "Akamai",
+        proficiency: 0.5,
+        logo: Akamai
+      },
+      {
+        name: "GIT",
         proficiency: 0.7,
         logo: GitLogo
       },
@@ -66,11 +73,7 @@ const DATA = {
         proficiency: 0.5,
         logo: PythonLogo,
       },
-      {
-        name: "Jenkins",
-        proficiency: 0.7,
-        logo: JenkinsLogo,
-      },
+
       {
         name: "Docker",
         proficiency: 0.7,
@@ -87,23 +90,13 @@ const DATA = {
         logo: PostmanLogo,
       },
       {
-        name: "Html & CSS",
-        proficiency: 0.4,
-        logo: htmlLogo,
+        name: "Selenium",
+        proficiency: 0.7,
+        logo: SeleniumLogo,
       },
     ],
     frameworks: [
-      "Selenium-Java",
-      "WebdriverIO",
-      "testNg",
-      "Pytest",
-      "Cypress",
-      "Nightwatch",
-      "Jasmine",
-      "Pytest-request",
-      "Mocha",
-      "Protractor",
-      "BDD"
+
     ],
     tools: [
       "JMeter",
@@ -159,54 +152,31 @@ const DATA = {
     companies: [
       {
         name: "Redhat",
-        title: "Senior SDET",
+        title: "Devops Consultant",
         range: "March 2018, November 2020",
         projects: [
           {
-            name: "Front end Web automation",
+            name: "Confidential - Devops",
             tools: [
-              "WebdriverIO",
-              "Javascript",
-              "Jenkins",
+              "Selenium",
               "Docker",
-              "Selenium Grid",
-              "GIT"
+              "Jenkins",
+              "GIT",
+              "Java",
+              "Ansible",
+              "Kuberntes",
+              "Puppet",
+              "Akamai"
             ],
             achievements: [
+              <span>Setting up production deployment pipelines using CI/CD </span>,
               <span>
-                Designed complete test architecture of customer facing
-                application in terms of UI and Backend from scratch.
-              </span>,
-              <span>
-                Actively involved in making key decisions with stakeholders and
-                developers for the application
-              </span>,
-              <span>Scrum master for daily updates.</span>,
-              <span>
-                Involved in debugging issues customer is facing by going through
-                various systems like Splunk , Database, Sentry logs etc.
-              </span>,
-              <span>
-                Leading all technical efforts in automation and QE space inside
-                project.
-              </span>,
-              <span>
-                Created end to end test pipeline using selenium grid and docker
-                which runs daily test excecution over Jenkins.
-              </span>,
-
-              <span>
-                Wrote test case parameters, including test scripts and
-                automation guidelines.
-              </span>,
-              <span>
-                Integrated collected data into business process enhancements to
-                address ongoing business goals.
-              </span>,
-              <span>
-                Defined and tracked quality assurance metrics, including test
-                results, defect counts and performance discrepancies.
-              </span>,
+                Part of a 10-person team that developed a CI/CD pipeline and cut software release times by 50% with a 15% increase in customer satisfaction.
+                </span>,
+              <span>Used Selenium to develop a series of new automated software tests that cut QA overheads by $5,000</span>,
+              <span>Helped make the company's development, testing and production environments more consistent by implementing container technology using Kubernetes</span>,
+              <span>Proactively identified and resolved performance bottlenecks for a new application before it went to production</span>,
+              <span>Experience with <b>Puppet, Ansible and Kubernetes</b></span>
             ],
           },
           {
@@ -214,9 +184,8 @@ const DATA = {
             tools: ["Python", "Basic shell scripting"],
             achievements: [
               <span>
-                Created python based test framework for running commands
+                Created Python test framework to automate command line application.
               </span>,
-              <span>Used python subprocess library to do automation</span>,
               <span>Wrote basic shell script to excecute tests</span>,
               <span>
                 Created CI/CD pipeline which helps in running test over every
@@ -225,23 +194,12 @@ const DATA = {
             ],
           },
           {
-            name: "Backend API Testing",
-            tools: ["JMeter", "Postman", "MySQL", "Pytest request"],
+            name: "Confidential - Devops Engineer",
+            tools: ["AWS", "Jenins", "Docker", "GIT", "Security"],
             achievements: [
-              <span>Created and maintained tests for api functionalties</span>,
-              <span>Used JMeter for API automation</span>,
-              <span>
-                Involved in requirement gathering from frontend team Developers
-                and Stakeholders
-              </span>,
-              <span>
-                Created CI/CD pipeline which helps in running test over Jenkins
-                and send daily reports with concerned teams
-              </span>,
-              <span>
-                Database testing to check proper data is getting saved in DB
-              </span>,
-              <span>Debugged if any issue occurs using MySQL and Splunk</span>,
+              <span>Built deployment plans for QA, release candidate and final release builds using Jenkins</span>,
+              <span>Wrote shell scripts using Python to automate tests for the production environment's infrastructure on AWSEC2</span>,
+              <span>Identified and helped resolve application environment issues, such as connection firewall issues, cloud configuration issues and Linux problems</span>,
             ],
           },
         ],
@@ -264,10 +222,6 @@ const DATA = {
                 Operated under Agile and Scrum frameworks to complete releases
                 every 3 weeks and well-organized sprints.
               </span>,
-              <span>
-                Reduced overall testing hours 90% by writing and optimizing
-                automation test scripts in Selenium.
-              </span>,
             ],
           },
         ],
@@ -280,74 +234,16 @@ const DATA = {
         projects: [
           {
             name: "",
-            tools: ["Javascript", "ReactJS", "React native"],
+            tools: ["Kuberntes", "Ansible", "Openshift","Teraform","Akamai"],
             achievements: [
               <span>
-                I have been working various personal projects and done React
-                boot camp to gain good level of understanding in web
-                development. My previous experience as front and back end
-                testing have given me advantage.
+                I have been working on my personal projects to deploy applications on Cloud using Heroku etc.
               </span>,
               <span>
-                Designed web application in React to check various test metrices
-                using various public APIs like Git, Jenkins, Browserstack, etc.
-              </span>,
-              <span>
-                Created Hotel reservation capstone project using React and React
-                context api.
-              </span>,
-              <span>
-                Created mobile application using React native for tracking
-                weather forecast using public weather forecast apis.
-              </span>,
-              <span>
-                Created React application for git hub jobs as capstone project
-              </span>,
-              <span>
-                Created React application for searching images using pixaby api.
-              </span>,
-                <span>
-                Scrimba certification for ReactJS bootcamp
-              </span>,
+                I have been learning orchestration tools like Kuberntes.
+              </span>
             ],
           },
-        ],
-      },
-    ],
-    projects: [
-      // {
-      //   name: "Created web applications",
-      //   tools: ["ReactJS", "React-Native", "Html", "CSS"],
-      //   github: "https://github.com/PaliwalArpit?tab=repositories",
-      //   achievements: [
-      //     <span>
-      //       Created dashboard which shows stakeholders status and health of
-      //       application by consuming different rest API from Jenkins, GIT,
-      //       Browserstack, internal APIs
-      //     </span>,
-      //     <span>Resume is created using ReactJS</span>,
-      //     <span>
-      //       Simple web applications : 1] Hotel reservation application, 2]
-      //       Weather forecast mobile app 3]Expense tracker
-      //     </span>,
-      //     <span>Scrimba Certification in ReactJS</span>,
-      //   ],
-      // },
-      {
-        name: "Speaker at QEcampX",
-        tools: ["Selenium", "Chromedevtools"],
-        github: "https://github.com/PaliwalArpit/selenium-chormedevtools-demo",
-        achievements: [
-          "Spoke about various features of Selenium 4 and chrome dev tools integration which going to be release in 2020 .QE camp is Redhat internal conference giving opportunities to QEs to share ideas and technology in QE world",
-        ],
-      },
-      {
-        name: "Speaker at Test trove",
-        tools: ["Selenoid", "Docker", "Selenium grid"],
-        github: "https://github.com/PaliwalArpit/wdio-selenoid-boilerplate",
-        achievements: [
-          "Selenoid is selenium hub golang implementation to run browsers in docker conatiners",
-          "Presented boilerplate code with audience shared what are the usage and features provided by Selenoid",
         ],
       },
     ],
